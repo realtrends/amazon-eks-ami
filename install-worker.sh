@@ -60,6 +60,7 @@ sudo yum install -y \
     jq \
     ec2-instance-connect \
     nfs-utils \
+    amazon-efs-utils \
     socat \
     unzip \
     wget
