@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/hashicorp/packer:1.1.1
+    environment:
+      - AWS_ACCESS_KEY_ID: AKIARSLY7GYBSNFTIHHJ
+      - AWS_SECRET_ACCESS_KEY: 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
+    steps:
+      - checkout
+      - run: make 1.13
+workflows:
+    version: 2
+    build-eks-ami:
+      jobs:
+        - build
